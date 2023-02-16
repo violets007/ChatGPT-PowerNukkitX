@@ -1,0 +1,17 @@
+name: ChatGPTPlugin
+version: 1.0.0
+author: "violets007"
+api: [ "1.0.0","2.0.0" ]
+main: cn.violets007.chatgpt.ChatGPTPlugin
+load: POSTWORLD
+
+commands:
+  chat:
+    description: "§c聊天机器人"
+    usage: "/chat [聊天内容] 与OpenAI机器人开始聊天"
+    permission: chat
+
+permissions:
+  chat:
+    description: "§c聊天机器人配置"
+    default: op #默认只有OP才能执行此命令
