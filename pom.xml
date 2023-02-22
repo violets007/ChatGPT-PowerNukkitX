@@ -23,7 +23,7 @@
             <artifactId>powernukkitx</artifactId>
             <version>1.19.60-r1</version>
             <scope>system</scope>
-            <systemPath>/Volumes/debug/IDEAProject/TestPlugin/lib/powernukkitx.jar</systemPath>
+            <systemPath>${project.basedir}/libs/powernukkitx.jar</systemPath>
         </dependency>
 
         <dependency>
