@@ -25,8 +25,11 @@ public class ChatGPTPlugin extends PluginBase {
     public void onEnable() {
         getLogger().info(TextFormat.BLUE + "ChatGPTPlugin 运行");
         String apiKey = getConfig().get("apiKey").toString();
+        int maxTokens = getConfig().getInt("maxTokens",2048);
+        double topP = getConfig().getDouble("topP",0.2);
+        double temperature = getConfig().getDouble("temperature",0.5f);
         getLogger().info(TextFormat.BLUE + "读取到的OpenAI的apiKey是: " + TextFormat.RED + TextFormat.BOLD + apiKey);
-        this.requestOpenAIAPI = new RequestOpenAIAPI(apiKey);
+        this.requestOpenAIAPI = new RequestOpenAIAPI(apiKey, maxTokens, topP, temperature);
     }
 
     @Override

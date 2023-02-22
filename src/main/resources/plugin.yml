@@ -1,8 +1,9 @@
 name: ChatGPTPlugin
-version: 1.0.0
+version: "1.1"
 author: "violets007"
 api: [ "1.0.0","2.0.0" ]
 main: cn.violets007.chatgpt.ChatGPTPlugin
+description: "回答玩家的简单问题插件"
 load: POSTWORLD
 
 commands:
