@@ -13,7 +13,7 @@ ChatGPT-PowerNukkitX 的主要功能是为 PowerNukkitX 社区提供自动问答
 ## 使用方法
 运行PowerNukkitx服务器放入plugins,并且修改apiKey
 
-## download
+## 下载地址
 github actions
 
 ## 配置文件
