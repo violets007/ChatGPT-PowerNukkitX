@@ -19,23 +19,8 @@ jobs:
       - name: Build with Maven
         run: mvn clean package -DskipTests
         
-      - name: Create GitHub Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.CHATGPT_ACCESS_TOKEN }}
+      - name: Upload JAR file
+        uses: actions/upload-artifact@v2
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          draft: false
-          prerelease: false
-          
-      - name: Upload JAR to Release
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.CHATGPT_ACCESS_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: target/ChatGPTPlugin-1.1.jar
-          asset_name: ChatGPTPlugin-1.1.jar
-          asset_content_type: application/java-archive
+          name: ChatGPT-PowerNukkitx
+          path: target/*.jar
